@@ -1,17 +1,26 @@
 import React from "react";
+import Input from "../components/Input";
+import Button from "../components/Button";
 
 const Signup = () => {
   return (
-    <div className="flex flex-col justify-center h-80">
+    <div className="flex flex-col justify-center min-h-screen">
       <form
-        className="bg-white border-2 border-blue-700 w-80 rounded-lg mx-auto p-6 flex flex-col space-y-3"
+        className="bg-white border-2 border-blue-700 w-[60%] rounded-lg mx-auto p-6 flex flex-col space-y-3"
         onSubmit={(event) => {
           event.preventDefault();
         }}
       >
-        <label id="email" className="font-bold">E-mail</label>
-        <input id="email" type="email" className="transition ease-in-out delay-150 border-2 border-stone-400 rounded-md focus:outline-none focus:ring-blue-700 focus:ring-1 focus:border-blue-700 p-1"></input>
-        <button type="submit" className="bg-blue-600 p-2 rounded-lg w-40 mx-auto">Sign Up</button>
+        <h1 className="text-center text-4xl font-sak my-3 text-blue-700">
+          Welcome to AppName!
+        </h1>
+        <hr className="border-[1px] border-stone-400" />
+        <p className="text-center font-bold text-2xl italic font-portal text-indigo-300">
+          Get started with an account
+        </p>
+        <Input id={"email"} type={"email"} label={"E-mail"} />
+        <Input id={"password"} type={"password"} label={"Password"} />
+        <Button type={"submit"}>Sign Up</Button>
       </form>
     </div>
   );

@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import UserPlaces from "./pages/UserPlaces";
 
 function App() {
   const router = createBrowserRouter([
@@ -15,6 +16,7 @@ function App() {
         { path: "/", element: <Home /> },
         { path: "/auth", element: <Login /> },
         { path: "/new-user", element: <Signup /> },
+        { path: "/:uid/places", element: <UserPlaces /> },
       ],
     },
     ,
@@ -22,7 +24,7 @@ function App() {
 
   return (
     <>
-      <main className="bg-blue-200 min-h-screen">
+      <main className="bg-gradient-to-t from-cyan-500  min-h-screen">
         <RouterProvider router={router} />
       </main>
     </>

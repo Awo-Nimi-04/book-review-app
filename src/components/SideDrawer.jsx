@@ -2,22 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom";
 import NavLinks from "./NavLinks";
 import { CSSTransition } from "react-transition-group";
+import { Link } from "react-router-dom";
 
 const SideDrawer = ({ show, onClick }) => {
   const content = (
     <CSSTransition
       in={show}
-      timeout={1000}
-      classNames={{
-        enter: "-translate-x-full",
-        enterActive: "translate-x-0 opacity-100 transition-all duration-1000",
-        exit: "translate-x-0 opacity-100",
-        exitActive: "-translate-x-full opacity-0 transition-all duration-1000",
-      }}
+      timeout={200}
+      classNames={"slide-in-left"}
       mountOnEnter
       unmountOnExit
     >
-      <aside className="min-h-screen flex flex-col justify-center items-center fixed shadow-lg md:hidden z-50 bg-white w-[70%]">
+      <aside className="min-h-screen left-0 top-0 flex flex-col space-y-10 justify-center items-center fixed shadow-lg md:hidden z-50 bg-white w-[70%]">
+        <Link to={"/"} onClick={onClick}>
+          <p className="font-stitch text-blue-600 text-[50px]">AppName</p>
+        </Link>
         <nav className="h-40 flex flex-col justify-between">
           <NavLinks onClick={onClick} />
         </nav>
