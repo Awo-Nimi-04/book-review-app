@@ -1,7 +1,7 @@
 
 .nav-links a.active,
 .nav-links a:hover{
-  background: #2563eb;
+  background: #1e40af;
   color: #ffffff;
 }
 
@@ -11,10 +11,10 @@
     }
     .nav-links a.active{
         background: #ffffff;
-        color: #2563eb;
+        color: #1e40af;
       }
       .nav-links a:hover{
         background: #ffffff;
-        color: #2563eb;
+        color: #1e40af;
       }
 }

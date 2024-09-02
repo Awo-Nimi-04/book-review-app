@@ -1,38 +1,74 @@
 import React from "react";
 import "./NavLinks.css";
 import { NavLink, Link } from "react-router-dom";
+import { PageContext } from "../context/Context";
+import { useContext } from "react";
+
 const NavLinks = ({ onClick }) => {
+  const { isAuthUser } = useContext(PageContext);
   return (
-    <nav className="nav-links flex flex-col h-60 md:h-0 justify-between md:flex-row items-center w-60 md:justify-between md:justify-center">
-      <NavLink
-        onClick={onClick}
-        className={
-          "p-1 rounded-lg hover:bg-blue-500 md:hover:bg-white font-portal text-2xl md:text-[#000000] text-blue-500"
-        }
-        to={"/auth"}
-        exact={"true"}
-      >
-        Login
-      </NavLink>
-      <NavLink
-        onClick={onClick}
-        className={
-          "p-1 rounded-lg hover:bg-blue-500 md:hover:bg-white font-portal text-2xl md:text-[#000000] text-blue-500"
-        }
-        to={"/new-user"}
-        exact={"true"}
-      >
-        Sign Up
-      </NavLink>
-      <Link
-        to="/"
-        onClick={() => {
-          onClick();
-        }}
-        className="p-1 rounded-lg hover:text-white hover:bg-blue-500 md:hover:bg-white  font-portal text-2xl md:text-[#000000] md:hover:text-blue-500 text-blue-500"
-      >
-        Log Out
-      </Link>
+    <nav
+      className={`nav-links flex flex-col h-60 md:h-0 justify-evenly md:flex-row items-center w-${
+        isAuthUser ? "80" : "60"
+      } md:justify-evenly md:justify-center`}
+    >
+      {!isAuthUser && (
+        <>
+          <NavLink
+            onClick={onClick}
+            className={
+              "p-1 rounded-lg hover:bg-blue-800 md:hover:bg-white font-[800] font-paris text-xl md:text-[#000000] text-blue-800"
+            }
+            to={"/auth"}
+            exact={"true"}
+          >
+            Login
+          </NavLink>
+          <NavLink
+            onClick={onClick}
+            className={
+              "p-1 rounded-lg hover:bg-blue-800 md:hover:bg-white font-[800] font-paris text-xl md:text-[#000000] text-blue-800"
+            }
+            to={"/new-user"}
+            exact={"true"}
+          >
+            Sign Up
+          </NavLink>
+        </>
+      )}
+      {isAuthUser && (
+        <>
+          <NavLink
+            onClick={onClick}
+            className={
+              "p-1 rounded-lg hover:bg-blue-800 md:hover:bg-white font-[800] font-paris text-xl md:text-[#000000] text-blue-800"
+            }
+            to={"/6/books"}
+            exact={"true"}
+          >
+            My Books
+          </NavLink>
+          <NavLink
+            onClick={onClick}
+            className={
+              "p-1 rounded-lg hover:bg-blue-800 md:hover:bg-white font-[800] font-paris text-xl md:text-[#000000] text-blue-800"
+            }
+            to={"/new-book"}
+            exact={"true"}
+          >
+            Add A Book
+          </NavLink>
+          <Link
+            to="/"
+            onClick={() => {
+              onClick();
+            }}
+            className="p-1 rounded-lg hover:text-white hover:bg-blue-800 md:hover:bg-white font-[800] font-paris text-xl md:text-[#000000] md:hover:text-blue-800 text-blue-800"
+          >
+            Log Out
+          </Link>
+        </>
+      )}
     </nav>
   );
 };

@@ -5,7 +5,10 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import UserPlaces from "./pages/UserPlaces";
+import UserBooks from "./pages/UserBooks";
+import EditBook from "./pages/EditBook";
+import ViewBook from "./pages/ViewBook";
+import NewBook from "./pages/NewBook";
 
 function App() {
   const router = createBrowserRouter([
@@ -16,18 +19,19 @@ function App() {
         { path: "/", element: <Home /> },
         { path: "/auth", element: <Login /> },
         { path: "/new-user", element: <Signup /> },
-        { path: "/:uid/places", element: <UserPlaces /> },
+        { path: "/:uid/books", element: <UserBooks /> },
+        { path: "/edit-book/:bookId", element: <EditBook /> },
+        { path: "/new-book", element: <NewBook /> },
+        { path: "/book/:bookId", element: <ViewBook /> },
       ],
     },
     ,
   ]);
 
   return (
-    <>
-      <main className="bg-gradient-to-t from-cyan-500  min-h-screen">
-        <RouterProvider router={router} />
-      </main>
-    </>
+    <main className="bg-gradient-to-b from-cyan-300 to-blue-500 min-h-screen">
+      <RouterProvider router={router} />
+    </main>
   );
 }
 

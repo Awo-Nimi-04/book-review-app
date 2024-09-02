@@ -15,7 +15,7 @@ const NavBar = () => {
     <>
       {showSideDrawer && <Backdrop onClose={closeSideDrawer} />}
       <SideDrawer show={showSideDrawer} onClick={closeSideDrawer} />
-      <header className="static w-full bg-blue-600 z-40 p-4 flex space-x-4 md:justify-between items-center">
+      <header className="static w-full bg-blue-800 z-40 p-4 flex space-x-4 md:justify-between items-center">
         <button
           onClick={openSideDrawer}
           className="md:hidden flex flex-col h-6 justify-between"
@@ -25,7 +25,7 @@ const NavBar = () => {
           <span className="block bg-white w-8 h-1" />
         </button>
         <Link to="/">
-          <p className="text-4xl text-white font-stitch">AppName</p>
+          <p className="text-4xl text-white font-sparky">AppName</p>
         </Link>
         <div className="hidden md:block">
           <NavLinks />

@@ -25,6 +25,8 @@
   transition: all 200ms;
 }
 
+
+
 @font-face {
   font-family: "Broadway";
   src: url("./assets/fonts/BroadwayEvent.ttf") format("truetype");
@@ -59,6 +61,49 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Doodle";
+  src: url("./assets/fonts/DOODLE.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SparkyStones";
+  src: url("./assets/fonts/SparkyStones.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PerfectMoment";
+  src: url("./assets/fonts/PerfectMoment.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Paris";
+  src: url("./assets/fonts/ParisVanJavaThinItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Harga";
+  src: url("./assets/fonts/hHarga.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mangiola";
+  src: url("./assets/fonts/Mangiola-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @tailwind base;
 @tailwind components;
