@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-import pinImg from '../assets/pinImg.png'
-import pin2Img from '../assets/pin2Img.png'
-import redPinImg from '../assets/redPinImg.png'
+import redPinImg from "../assets/images/redPinImg.png";
 import { BOOKS_INFO } from "../utilities/Data";
 import Backdrop from "../components/Backdrop";
 import Modal from "../components/Modal";
@@ -38,15 +36,20 @@ const ViewBook = () => {
       />
       <div className="w-full flex flex-col justify-center items-center space-y-5">
         <div className="bg-white p-5 rounded-xl shadow-2xl mt-7  w-[70%] lg:w-[50%]">
-          <header className="text-center text-2xl mb-2 font-sparky">{currentBook.title}</header>
+          <header className="text-center text-2xl mb-2 font-sparky">
+            {currentBook.title}
+          </header>
           <div className="flex flex-col lg:flex-row justify-evenly items-center">
             <div className="w-[50%] p-3 flex flex-col justify-center mb-2 items-center">
               <div className="p-2 rounded-lg w-48 bg-purple-400 shadow-xl">
                 <img src={currentBook.bookCover} />
               </div>
             </div>
-            <div className="relative z-10 container flex flex-col lg:w-[50%] mt-2 justify-start lg:border-hidden border-t p-3 bg-amber-200 rounded-lg shadow-xl">
-            <img className="absolute -top-12 -right-8 md:-right-[3rem] md:-top-[3rem] origin-center rotate-[60deg] w-[40%] md:w-[30%] lg:w-[40%]" src={redPinImg}/>
+            <div className="relative z-10 container flex flex-col lg:w-[60%] mt-2 justify-start lg:border-hidden border-t p-3 bg-amber-200 rounded-lg shadow-xl">
+              <img
+                className="absolute -top-12 -right-8 md:-right-[3rem] md:-top-[3rem] origin-center rotate-[60deg] w-[40%] md:w-[30%] lg:w-[40%]"
+                src={redPinImg}
+              />
               <p className="font-bold font-portal">ISBN</p>
               <p className="text-sm mb-2"> {currentBook.ISBN}</p>
               <p className="font-bold font-portal">Author</p>

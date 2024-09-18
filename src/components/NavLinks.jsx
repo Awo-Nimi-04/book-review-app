@@ -9,7 +9,7 @@ const NavLinks = ({ onClick }) => {
   return (
     <nav
       className={`nav-links flex flex-col h-60 md:h-0 justify-evenly md:flex-row items-center w-${
-        isAuthUser ? "80" : "60"
+        isAuthUser ? "80 space-x-2" : "60"
       } md:justify-evenly md:justify-center`}
     >
       {!isAuthUser && (

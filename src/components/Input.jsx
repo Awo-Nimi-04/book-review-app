@@ -167,7 +167,7 @@ const Input = forwardRef(function Input(
               !inputState.isValid && inputState.isTouched
                 ? "border-red-500"
                 : "border-stone-400"
-            } rounded-lg focus:outline-none focus:ring-blue-700 focus:ring-1 focus:border-blue-700 p-3`}
+            } rounded-lg focus:outline-none focus:ring-blue-700 focus:ring-1 focus:border-blue-700 p-1`}
             value={inputState.value}
           ></input>
         )}
